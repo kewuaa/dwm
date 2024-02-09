@@ -13,10 +13,17 @@ static const char norm_bg[]         = "#1b1d2b";
 static const char sele_fg[]         = "#444a73";
 static const char sele_bg[]         = "#c8d3f5";
 static const char sele_border[]     = "#ffc777";
+static const unsigned int baralpha = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
     /* fg bg border */
     [SchemeNorm] = { norm_fg, norm_bg, norm_bg },
     [SchemeSel]  = { sele_fg, sele_bg, sele_border },
+};
+static const unsigned int alphas[][3]      = {
+    /*               fg      bg        border*/
+    [SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
 /* tagging */
