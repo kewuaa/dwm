@@ -1,2 +1,7 @@
 fcitx5 -d
-slstatus
+picom -b
+slstatus &
+while feh --bg-fill --randomize --recursive ~/.wallpaper;
+do
+    sleep 600
+done
