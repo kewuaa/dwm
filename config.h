@@ -8,6 +8,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "FiraCode Nerd Font:size=15" };
 static const char dmenufont[]       = "FiraCode Nerd Font:size=20";
+static const char stfont[]          = "FiraCode Nerd Font:pixelsize=17.5:antialias=true:autohint=true";
 static const char norm_fg[]         = "#828bb8";
 static const char norm_bg[]         = "#1b1d2b";
 static const char sele_fg[]         = "#444a73";
@@ -59,7 +60,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sele_bg, "-sf", sele_fg, NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "st", "-f", stfont, NULL };
 static const char *inclight[] = { "xbacklight", "-inc", "5", NULL };
 static const char *declight[] = { "xbacklight", "-dec", "5", NULL };
 static const char *incvolumn[] = { "amixer", "-qM", "set", "Master", "5%+", NULL };
