@@ -10,6 +10,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "FiraCode Nerd Font:size=15" };
 static const char dmenufont[]       = "FiraCode Nerd Font:size=20";
 static const char stfont[]          = "FiraCode Nerd Font:pixelsize=17.5:antialias=true:autohint=true";
+static const char hi_fg[]           = "#ff757f";
 static const char norm_fg[]         = "#828bb8";
 static const char norm_bg[]         = "#1b1d2b";
 static const char sele_fg[]         = "#444a73";
@@ -78,6 +79,10 @@ static const char *dmenucmd[] = {
     "-nf", norm_fg,
     "-sb", sele_bg,
     "-sf", sele_fg,
+    "-nhb", norm_bg,
+    "-nhf", hi_fg,
+    "-shb", sele_bg,
+    "-shf", hi_fg,
     NULL,
 };
 static const char *termcmd[]  = { "st", "-f", stfont, NULL };
