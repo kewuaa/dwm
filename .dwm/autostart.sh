@@ -1,2 +1,3 @@
 fcitx5 -d
-slstatus
+slstatus &
+xautolock -time 30 -locker slock
