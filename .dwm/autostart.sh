@@ -4,4 +4,5 @@ slstatus &
 while feh --bg-fill --randomize --recursive ~/.wallpaper;
 do
     sleep 600
-done
+done &
+xautolock -time 30 -locker slock
