@@ -29,6 +29,8 @@ static const Rule rules[] = {
      *	WM_NAME(STRING) = title
      */
     /* class         instance    title       tags mask     isfloating   monitor */
+    { "QQ",          NULL,       NULL,       0,            1,           -1 },
+    { "wechat",      NULL,       NULL,       0,            1,           -1 },
     { "VirtualBox",  NULL,       NULL,       0,            1,           -1 },
     { "firefox",     NULL,       NULL,       1 << 1,       0,           -1 },
 };
