@@ -30,16 +30,18 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", ""};
+static const char *tags[] = { "", "", "󰘅", "󰘑", "", ""};
 
 static const Rule rules[] = {
     /* xprop(1):
      *	WM_CLASS(STRING) = instance, class
      *	WM_NAME(STRING) = title
      */
-    /* class         instance    title       tags mask     isfloating   monitor */
-    { "VirtualBox",  NULL,       NULL,       0,            1,           -1 },
-    { "firefox",     NULL,       NULL,       1 << 1,       0,           -1 },
+    /* class          instance    title       tags mask     isfloating   monitor */
+    { "firefox",      NULL,       NULL,       1 << 1,       0,           -1 },
+    { "QQ",           NULL,       NULL,       1 << 2,       1,           -1 },
+    { "wechat",       NULL,       NULL,       1 << 3,       1,           -1 },
+    { "VirtualBox",   NULL,       NULL,       1 << 4,       1,           -1 },
 };
 
 /* layout(s) */
