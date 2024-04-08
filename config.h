@@ -88,11 +88,11 @@ static const char *dmenucmd[] = {
     NULL,
 };
 static const char *termcmd[]  = { "st", "-f", stfont, NULL };
-static const char *inclight[] = { "xbacklight", "-inc", "5", NULL };
-static const char *declight[] = { "xbacklight", "-dec", "5", NULL };
-static const char *incvolumn[] = { "amixer", "-qM", "set", "Master", "5%+", NULL };
-static const char *decvolumn[] = { "amixer", "-qM", "set", "Master", "5%-", NULL };
-static const char *mute[] = { "amixer", "-qM", "set", "Master", "toggle", NULL };
+static const char *inclight[] = { "brightnessctl", "set", "+5%", NULL };
+static const char *declight[] = { "brightnessctl", "set", "5%-", NULL };
+static const char *incvolumn[] = { "pamixer", "-i", "5", NULL };
+static const char *decvolumn[] = { "pamixer", "-d", "5", NULL };
+static const char *mute[] = { "pamixer", "--toggle-mute", NULL };
 static const char *flameshotcmd[] = { "flameshot", "gui", NULL };
 
 static const Key keys[] = {
