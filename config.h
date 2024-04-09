@@ -131,12 +131,12 @@ static const Key keys[] = {
     TAGKEYS(                        XK_6,                      5)
     { MODKEY|ShiftMask,             XK_q,      quit,           {0} },
     /* custom keymaps */
-    { 0, XF86XK_MonBrightnessUp, spawn, {.v = inclight} },
-    { 0, XF86XK_MonBrightnessDown, spawn, {.v = declight} },
-    { 0, XF86XK_AudioRaiseVolume, spawn, {.v = incvolumn} },
-    { 0, XF86XK_AudioLowerVolume, spawn, {.v = decvolumn} },
-    { 0, XF86XK_AudioMute, spawn, {.v = mute} },
-    { MODKEY|ShiftMask, XK_s, spawn, {.v = flameshotcmd} },
+    { 0,                            XF86XK_MonBrightnessUp,   spawn, {.v = inclight} },
+    { 0,                            XF86XK_MonBrightnessDown, spawn, {.v = declight} },
+    { 0,                            XF86XK_AudioRaiseVolume,  spawn, {.v = incvolumn} },
+    { 0,                            XF86XK_AudioLowerVolume,  spawn, {.v = decvolumn} },
+    { 0,                            XF86XK_AudioMute,         spawn, {.v = mute} },
+    { MODKEY|ShiftMask,             XK_s,                     spawn, {.v = flameshotcmd} },
 };
 
 /* button definitions */
