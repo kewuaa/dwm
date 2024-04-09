@@ -29,6 +29,15 @@ static const unsigned int alphas[][3]      = {
     [SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
+static const char *const autostart[] = {
+    "picom", NULL,
+    "slstatus", NULL,
+    "xautolock", "-corners", "-+-+", "-time", "30", "-locker", "slock", NULL,
+    "sh", "-c", "while feh --bg-fill --randomize --recursive ~/wallpapers; do sleep 900; done", NULL,
+    "sh", "-c", "command -v fcitx5 > /dev/null && fcitx5", NULL,
+    NULL /* terminate */
+};
+
 /* tagging */
 static const char *tags[] = { "", "", "󰘅", "󰘑", "", ""};
 
