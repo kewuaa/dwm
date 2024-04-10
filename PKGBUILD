@@ -11,7 +11,7 @@ depends=(
     "fontconfig"
     "xorg-server"
 )
-makedepends=("gcc" "make" "pkgconf")
+makedepends=("gcc" "make")
 
 
 build() {
