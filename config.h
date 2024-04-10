@@ -102,7 +102,6 @@ static const char *declight[] = { "brightnessctl", "set", "5%-", NULL };
 static const char *incvolumn[] = { "pamixer", "-i", "5", NULL };
 static const char *decvolumn[] = { "pamixer", "-d", "5", NULL };
 static const char *mute[] = { "pamixer", "--toggle-mute", NULL };
-static const char *flameshotcmd[] = { "flameshot", "gui", NULL };
 
 static const Key keys[] = {
     /* modifier                     key        function        argument */
@@ -145,7 +144,6 @@ static const Key keys[] = {
     { 0,                            XF86XK_AudioRaiseVolume,  spawn, {.v = incvolumn} },
     { 0,                            XF86XK_AudioLowerVolume,  spawn, {.v = decvolumn} },
     { 0,                            XF86XK_AudioMute,         spawn, {.v = mute} },
-    { MODKEY|ShiftMask,             XK_s,                     spawn, {.v = flameshotcmd} },
 };
 
 /* button definitions */
