@@ -2,3 +2,6 @@
 *.rej
 *.orig
 dwm
+/src
+/pkg
+*.zst
