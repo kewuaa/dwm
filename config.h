@@ -32,6 +32,7 @@ static const unsigned int alphas[][3]      = {
 static const char *const autostart[] = {
     "picom", NULL,
     "slstatus", NULL,
+    "redshift", NULL,
     "xautolock", "-corners", "-+-+", "-time", "30", "-locker", "slock", NULL,
     "sh", "-c", "while feh --bg-fill --randomize --recursive ~/wallpapers; do sleep 900; done", NULL,
     "sh", "-c", "command -v fcitx5 > /dev/null && fcitx5", NULL,
@@ -102,6 +103,11 @@ static const char *declight[] = { "brightnessctl", "set", "5%-", NULL };
 static const char *incvolumn[] = { "pamixer", "-i", "5", NULL };
 static const char *decvolumn[] = { "pamixer", "-d", "5", NULL };
 static const char *mute[] = { "pamixer", "--toggle-mute", NULL };
+static const char *screenshotcmd[] = {
+    "sh", "-c",
+    "sleep 0.2; scrot -s -e 'xclip -selection clipboard -t \"image/png\" < $f && rm $f'",
+    NULL,
+};
 
 static const Key keys[] = {
     /* modifier                     key        function        argument */
@@ -144,6 +150,7 @@ static const Key keys[] = {
     { 0,                            XF86XK_AudioRaiseVolume,  spawn, {.v = incvolumn} },
     { 0,                            XF86XK_AudioLowerVolume,  spawn, {.v = decvolumn} },
     { 0,                            XF86XK_AudioMute,         spawn, {.v = mute} },
+    { MODKEY|ShiftMask,             XK_s,                     spawn, {.v = screenshotcmd} },
 };
 
 /* button definitions */

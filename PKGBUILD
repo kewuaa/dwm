@@ -45,6 +45,12 @@ package() {
         "xorg-xinit"
         "xorg-xset"
         "xorg-xsetroot"
+        # clipboard support
+        "xclip"
+        # screen shot
+        "scrot"
+        # Day/night gamma adjustments
+        "redshift"
     )
     optdepends=("xorg-xprop")
 
