@@ -52,7 +52,10 @@ package() {
         # Day/night gamma adjustments
         "redshift"
     )
-    optdepends=("xorg-xprop")
+    optdepends=(
+        "xorg-xprop"
+        "xorg-xrandr: configure outputs"
+    )
 
     cd ${srcdir}/..
     make DESTDIR="${pkgdir}" PREFIX="/usr" MANPREFIX="/usr/local/man" install
